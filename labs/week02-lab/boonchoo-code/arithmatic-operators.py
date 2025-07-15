@@ -12,6 +12,7 @@ b = 4
 print(f"a = {a}, b = {b}")
 print()
 
+
 # Addition (+)
 result_add = a + b
 print(f"Addition:       {a} + {b} = {result_add}")
