@@ -15,14 +15,14 @@ emergency_fund_percent = float(input("Percentage to save for emergency (e.g., 10
 investment_percent = float(input("Percentage to invest (e.g., 15.0): "))
 
 #calculate เเยกเขียนระหว่างส่วนคำนวณเเละเเสดงผลจะได้ดูง่ายๆ 
-fixexpenses = rent_coat + transportation_cost #คำนวณตั้งเเต่ line 23
-variableexpenses = food_budget + entertainment_budget #24
-totalexpenses = fixexpenses + variableexpenses #25
-remainingincome = income - totalexpenses #26
-emergencyfund = income * (emergency_fund_percent / 100) #28
-investment = income * (investment_percent / 100) #29
-saving = remainingincome - emergencyfund - investment #30
-ratio = (totalexpenses / income) * 100 #32
+fixexpenses = rent_coat + transportation_cost #คำนวณตั้งเเต่ line 31
+variableexpenses = food_budget + entertainment_budget #32
+totalexpenses = fixexpenses + variableexpenses #33
+remainingincome = income - totalexpenses #34
+emergencyfund = income * (emergency_fund_percent / 100) #36
+investment = income * (investment_percent / 100) #37
+saving = remainingincome - emergencyfund - investment #38
+ratio = (totalexpenses / income) * 100 #40
 
 #output display
 #ใช้ f string จะได้เขียนสั้นๆเเละ format เลขได้
