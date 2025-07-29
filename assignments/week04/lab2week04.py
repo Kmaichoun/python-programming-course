@@ -21,33 +21,30 @@ def number_operations():
     # Get 10 numbers from user
     print("Enter 10 numbers:")
     for i in range(10):
-        n = int(input("Enter your numbers :"))# Your code here
-        numbers.append(n)
-        pass
+        num = int(input(f"Enter number [{i+1}]: "))
+        numbers.append(num)
     
     # Display original list
     print(f"Original numbers: {numbers}")
     
     # Create filtered lists
-    even_numbers = []# Your code here
-    odd_numbers = []# Your code here
-    for n in numbers:
-        if n % 2 == 0:
-            even_numbers.append(n)
-        else:
-            odd_numbers.append(n)
-
-
+    even_numbers = []
+    odd_numbers = []
+    
     # Calculate average
-    average = sum(numbers)/len(numbers)# Your code here
+    average = sum(numbers) / len(numbers)
     
     # Numbers greater than average
-    above_average = []# Your code here ค่าที่มากกว่าค่าเฉลี่ย
-    for n in numbers:
-        if n > average:
-            above_average.append(n)
+    above_average = []
+    
+    for num in numbers:
+        if num % 2 == 0:
+            even_numbers.append(num)
+        else:
+            odd_numbers.append(num)
+        if num > average:
+            above_average.append(num)
     # Display results
-    # Your code here
     print(f"\nSum: {sum(numbers)}")
     print(f"Average: {average}")
     print(f"Min: {min(numbers)}")

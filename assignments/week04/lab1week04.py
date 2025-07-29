@@ -16,44 +16,54 @@ Update age (by creating a new tuple)
 # Complete this program
 def personal_info_manager():
     # Create initial person tuple
-    person = ("Wave", 21, "Chonburi", "Thailand")  # name, age, city, country
+    name = input("What is your name? ")
+    age = int(input("How old are you? "))
+    city = input("What city do you live in? ")
+    country = input("Where are you from? ")
+    person = ("Wave", 19, "Samutsakorn", "Thailand") 
     hobbies = []
-    # Your code here
 
-    #Display all information
     while True:
-        print("\n1. Display all information.")
-        print("2. Add new hobbies.")
-        print("3. Remove hobbies.") 
-        print("4. Update age.")
-        print("5. Exit\n")
-        choice = input("Choose option: ")
+        print("\nMenu:")
+        print("1. Display all information")
+        print("2. Add hobby")
+        print("3. Remove hobby")
+        print("4. Update age")
+        print("5. EXIT")
+        choice = input("Enter your choice: ")
+
         if choice == "1":
-            print("\nPersonal Information")
-            print("Name: ", person[0])
-            print("Age: ", person[1])
-            print("City: ", person[2])
-            print("country: ", person[3])
-            print("Hobby: ")
-            for i in range(len(hobbies)):
-                print(hobbies[i])
-    #Add new hobbie   
+            print("Name:", person[0])
+            print("Age:", person[1])
+            print("City:", person[2])
+            print("Country:", person[3])
+            print("Hobbies:", hobbies)
         elif choice == "2":
-            hobby = input("\nWhat's your hooby :")
+            hobby = input("Enter a hobby to add: ")
             hobbies.append(hobby)
-    #Remove hobbies
+            print("Hobby added.")
         elif choice == "3":
-         del hobbies[0]
-    #Update age (by creating a new tuple)
-        elif choice == "4":   
+            if hobbies:
+                print("Current hobbies:", hobbies)
+                to_remove = input("Enter the hobby to remove: ")
+                if to_remove in hobbies:
+                    hobbies.remove(to_remove)
+                    print("Hobby removed.")
+                else:
+                    print("Hobby not found.")
+            else:
+                print("No hobbies to remove.")
+        elif choice == "4":
             person_list = list(person)
-            age =int(input("\nHow old are you :"))
+            age = int(input("Enter new age: "))
             person_list[1] = age
             person = tuple(person_list)
+            print("Age updated.")
         elif choice == "5":
+            print("Exiting Personal Information Manager.")
             break
         else:
-            print("\nYour choice is worng.\nPlease Enter your choice again.")
+            print("Invalid choice. Please try again.")
             continue
 
 if __name__ == "__main__":
