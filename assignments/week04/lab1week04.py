@@ -16,11 +16,11 @@ Update age (by creating a new tuple)
 # Complete this program
 def personal_info_manager():
     # Create initial person tuple
-    name = input("What is your name? ")
-    age = int(input("How old are you? "))
-    city = input("What city do you live in? ")
-    country = input("Where are you from? ")
-    person = ("Wave", 19, "Samutsakorn", "Thailand") 
+    name = input("What is your name?:  ")
+    age = int(input("How old are you?:  "))
+    city = input("What city do you live in?:  ")
+    country = input("Where are you from?:  ")
+    person = (name,age,city,country) 
     hobbies = []
 
     while True:
