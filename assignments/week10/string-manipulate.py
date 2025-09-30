@@ -5,7 +5,7 @@ Core Features:
 
 1. Character Analysis:
     - Count total characters (with and without spaces)
-    - Count vowels and consonants separately
+    - Count vowels(สระ) and consonants separately
     - Find most frequent character
 
 2. Word Analysis:
@@ -47,3 +47,23 @@ Transformations:
 USE: len(), split(), count(), upper(), lower(), title(), slicing operations
 
 """
+
+#text = input("Enter text: ")
+text = "The Quick Brown Fox Jumps Over The Lazy Dog"
+print("=== TEXT ANALYSIS REPORT ===")
+print("Character Analysis: ")
+print("- Total characters: %d (with spaces), %d (without spaces)" % (len(text), len(text) - text.count(' ')))
+
+text = text.lower()
+Vowels = text.count('a') + text.count('e') + text.count('i') + text.count('o') + text.count('u')
+
+Vowels_string = ""
+for char in text:
+    if char in ['a', 'e','i', 'o', 'u']:
+        Vowels_string += char + ", "
+
+print("- Vowels: %d (%s)" % (Vowels,Vowels_string[0:-2]))
+print("- Consonants: %d" % (len(text) - text.count(' ') - Vowels))
+
+print("Word Analysis:")
+print("- Total words: %d"%len(text.split()))
